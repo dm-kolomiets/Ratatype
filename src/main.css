@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* directives */
+body {
+    @apply font-main md:text-xl py-2.5 md:py-5 text-main-0 font-medium px-5 min-h-screen;
+}
+
+.input__item {
+    @apply relative block;
+}
+
+.input {
+    @apply w-full border-2 border-gray__main-0 rounded-lg bg-input-0 px-4 pt-4 h-input md:h-input__md focus:outline-none focus:border-blue__main-0;
+}
+
+.invalid__text {
+    @apply text-sm md:text-base mt-1 text-red__main-0;
+}
+
+.btn {
+    @apply block w-full border-2 border-b-4 hover:border-b-8 px-5 py-2 text-center font-bold rounded-lg transition-all;
+}
+
+.link__sm {
+    @apply mt-1 mb-4 md:mb-5 inline-block text-sm md:text-base underline decoration-current hover:decoration-transparent transition-all
+}
+
+.link {
+    @apply font-bold underline decoration-current hover:decoration-transparent transition-all;
+}
+
+/* custom style */
+.btn {
+    height: 46px;
+}
+
+.btn__submit {
+    background-color: #FFEB99;
+    border-color: #FC0;
+}
+
+.input__item span {
+    transform: translateY(-50%);
+    color: rgba(23, 66, 88, 0.80);
+    line-height: 1;
+}
+
+.input__item.active span {
+    transform: translateY(0%);
+    top: 10px;
+    font-size: 14px;
+}
+
+.input__item.invalid {
+    margin-bottom: 0;
+}
+
+.input__item + p {
+    display: none;
+}
+
+.input__item.invalid + p {
+    display: block;
+}
+
+.input__item.invalid input {
+    border-color: #FF3B30ed;
+}
+
+.link__sm {
+    color: rgba(23, 66, 88, 0.80);
+}
+
+@media (min-width: 768px) {
+    .btn {
+        height: 50px;
+    }
+
+    .input__item.active span {
+        font-size: 16px;
+    }
+}
